@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[11:04 am, 06/10/2026] ✨~FaNa~✨: <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,287 +25,112 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        nav .logo {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #111;
-        }
-        nav .logo span {
-            color: #c5a880;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav ul li {
-            margin-left: 30px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #555;
-            font-size: 15px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        nav ul li a:hover {
-            color: #c5a880;
-        }
+            posi…
+[11:11 pm, 06/10/2026] ✨~FaNa~✨: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Bags Store</title>
+    <style>
+        /* Base Styles */
+        body { font-family: 'Georgia', serif; margin: 0; padding: 0; background-color: #fcfbfa; color: #333; }
+        
+        /* Premium Navbar */
+        nav { background-color: #111; padding: 20px; text-align: center; border-bottom: 1px solid #2a2415; }
+        nav .logo { font-size: 24px; color: #dfb76c; letter-spacing: 6px; font-weight: 300; text-transform: uppercase; }
 
-        /* HERO SECTION */
-        #home {
-            height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://unsplash.com');
-            background-size: cover;
-            background-position: center;
+        /* Luxury Hero Banner Element */
+        .hero-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            height: 550px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: #fff;
-            padding-top: 80px;
+            padding: 0 20px;
         }
-        #home h1 {
-            font-size: 50px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-        }
-        #home p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #ddd;
-        }
-        .btn-shop {
-            background-color: #c5a880;
-            color: #fff;
-            padding: 12px 35px;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 4px;
-            transition: 0.3s;
-            border: 2px solid #c5a880;
-        }
-        .btn-shop:hover {
-            background-color: transparent;
-            color: #fff;
-        }
-
-        /* PRODUCTS SECTION */
-        #products {
-            padding: 80px 8%;
-            text-align: center;
-        }
-        #products h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        #products h2::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background-color: #c5a880;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .section-desc {
-            color: #777;
-            margin-bottom: 50px;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .product-card {
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-            transition: 0.3s;
-            text-align: left;
-        }
-        .product-card:hover {
-            transform: translateY(-50px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        .product-img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-        }
-        .product-info {
-            padding: 20px;
-        }
-        .product-tag {
-            font-size: 12px;
-            color: #c5a880;
+        .hero-banner h2 { 
+            font-size: 3rem; 
+            margin: 0 0 15px 0; 
+            letter-spacing: 5px; 
+            font-weight: 300; 
+            color: #dfb76c;
             text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 5px;
-            display: block;
         }
-        .product-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #111;
-        }
-        .product-price {
-            font-size: 16px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 15px;
-        }
-        .add-to-cart-btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #111;
-            color: #fff;
-            border: none;
-            font-weight: 500;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-        .add-to-cart-btn:hover {
-            background-color: #c5a880;
-        }
-
-        /* CONTACT SECTION */
-        #contact {
-            background-color: #f3f0ea;
-            padding: 80px 8%;
-            text-align: center;
-        }
-        #contact h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-        }
-        .contact-form {
+        .hero-banner p { 
+            font-size: 1.2rem; 
+            margin: 0 0 30px 0; 
+            letter-spacing: 2px; 
             max-width: 600px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            font-style: italic;
+            color: #e5dfd3;
         }
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
+        .hero-banner .shop-btn { 
+            background-color: #dfb76c; 
+            color: #111; 
+            padding: 12px 35px; 
+            text-decoration: none; 
+            font-size: 0.9rem;
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-family: sans-serif;
         }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            outline: none;
-            font-size: 15px;
-        }
-        .submit-btn {
-            background-color: #111;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 4px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.3s;
-        }
-        .submit-btn:hover {
-            background-color: #c5a880;
+        .hero-banner .shop-btn:hover { 
+            background-color: #fff; 
+            color: #111;
+            box-shadow: 0 5px 15px rgba(223, 183, 108, 0.4);
         }
 
-        /* FOOTER */
-        footer {
-            background-color: #111;
-            color: #888;
-            text-align: center;
-            padding: 30px;
-            font-size: 14px;
-        }
+        /* Products Grid */
+        .section-title { text-align: center; margin: 50px 0 20px 0; letter-spacing: 3px; font-weight: 400; text-transform: uppercase; }
+        .container { max-width: 1100px; margin: 0 auto 60px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .product-card { background: white; padding: 25px; text-align: center; border: 1px solid #e5dfd3; transition: transform 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-card img { max-width: 100%; height: auto; margin-bottom: 20px; }
+        .product-card h3 { margin: 10px 0; font-weight: 400; letter-spacing: 1px; }
+        .price { color: #b89244; font-size: 1.3rem; font-weight: bold; margin-bottom: 20px; }
+        .btn { background-color: #111; color: white; padding: 12px 25px; text-decoration: none; display: inline-block; letter-spacing: 1px; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; }
+        .btn:hover { background-color: #dfb76c; color: #111; }
     </style>
-    <!-- Google Fonts Links -->
-    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
 
-    <!-- NAVBAR SECTION -->
+    <!-- Top Navigation Bar -->
     <nav>
-        <div class="logo">Vogue<span>Bags</span></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Collection</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="logo">Luxury Bags</div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="home">
-        <h1>Elegance In Every Detail</h1>
-        <p>Discover our exclusive university project collection of premium luxury handbags.</p>
-        <a href="#products" class="btn-shop">Shop Collection</a>
-    </section>
+    <!-- Luxury Hero Banner Section -->
+    <div class="hero-banner">
+        <h2>Define Your Elegance</h2>
+        <p>Discover our exclusive handcrafted collection of premium luxury bags</p>
+        <a href="#collection" class="shop-btn">Explore Collection</a>
+    </div>
 
-    <!-- PRODUCTS SECTION -->
-    <section id="products">
-        <h2>Our Premium Collection</h2>
-        <p class="section-desc">Handcrafted luxury bags designed for the modern lifestyle.</p>
-        
-        <div class="product-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <img src="https://unsplash.com" alt="Classic Leather Tote" class="product-img">
-                <div class="product-info">
-                    <span class="product-tag">Tote Bag</span>
-                    <div class="product-title">Classic Leather Tote</div>
-                    <div class="product-price">$120.00</div>
-                    <button class="add-to-cart-btn" onclick="alert('Added to cart!')">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="https://unsplash.com" alt="Elegant Crossbody Bag" class="product-img">
-                <div class="product-info">
-                    <span class="product-tag">Crossbody</span>
-                    <div class="product-title">Scarlet Luxury Shoulder Bag</div>
-                    <div class="product-price">$95.00</div>
-                    <button class="add-to-cart-btn" onclick="alert('Added to cart!')">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="https://unsplash.com" alt="Minimalist Backpack" class="product-img">
-                <div class="product-info">
-                    <span class="product-tag">Luxury Clutch</span>
-                    <div class="product-title">Golden Chain Evening Clutch</div>
-                    <div class="product-price">$150.00</div>
-                    <button class="add-to-cart-btn" onclick="alert('Added to cart!')">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <img src="https://unsplash.com" alt="Vintage Shoulder Bag" class="product-img">
-                <div class="product-info">
-                    <span class="product-tag">Handbag</span>
-                    <div class="product-title">Classic Tan Satchel</div>
-                    <div class="product-price">$135.00</div>
-                    <button class="add-to-cart-btn" onclick="alert('Added to cart!')">Add to Cart</button>
-                </div>
-            </div>
+    <!-- Product Grid Section -->
+    <h2 class="section-title" id="collection">New Arrivals</h2>
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="https://unsplash.com" alt="Luxury Bag">
+            <h3>Classic Leather Handbag</h3>
+            <div class="price">$250</div>
+            <a href="#" class="btn">Order via WhatsApp</a>
         </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="https://unsplash.com" alt="Luxury Bag">
+            <h3>Premium Shoulder Bag</h3>
+            <div class="price">$320</div>
+            <a href="#" class="btn">Order via WhatsApp</a>
+        </div>
+    </div>
+
+</body>
+</html>
