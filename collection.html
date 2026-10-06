@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collection - Luxury Bags</title>
+    <style>
+        body { font-family: 'Georgia', serif; margin: 0; padding: 0; background-color: #fcfbfa; color: #333; }
+        nav { background-color: #111; padding: 20px; text-align: center; border-bottom: 1px solid #2a2415; }
+        nav .logo { font-size: 24px; color: #dfb76c; letter-spacing: 6px; font-weight: 300; text-transform: uppercase; margin-bottom: 10px; }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-family: sans-serif; font-size: 0.9rem; letter-spacing: 1px; }
+        nav a:hover { color: #dfb76c; }
+        .section-title { text-align: center; margin: 50px 0 20px 0; letter-spacing: 3px; font-weight: 400; text-transform: uppercase; }
+        .container { max-width: 1100px; margin: 0 auto 60px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .product-card { background: white; padding: 25px; text-align: center; border: 1px solid #e5dfd3; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .product-card img { max-width: 100%; height: auto; margin-bottom: 20px; max-height: 250px; object-fit: cover; }
+        .product-card h3 { margin: 10px 0; font-weight: 400; letter-spacing: 1px; }
+        .price { color: #b89244; font-size: 1.3rem; font-weight: bold; margin-bottom: 20px; }
+        .btn { background-color: #111; color: white; padding: 12px 25px; text-decoration: none; display: inline-block; letter-spacing: 1px; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; }
+        .btn:hover { background-color: #dfb76c; color: #111; }
+        footer { background-color: #111; color: #fff; padding: 40px 20px; border-top: 2px solid #dfb76c; font-family: sans-serif; }
+        .footer-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .footer-section h3 { color: #dfb76c; font-family: 'Georgia', serif; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; }
+        .footer-menu { list-style: none; padding: 0; margin: 0; }
+        .footer-menu li { margin-bottom: 12px; }
+        .footer-menu a { color: #ccc; text-decoration: none; font-size: 0.9rem; }
+        .footer-menu a:hover { color: #dfb76c; }
+        .search-box { display: flex; max-width: 300px; margin-top: 15px; }
+        .search-box input { flex: 1; padding: 10px; border: 1px solid #444; background-color: #222; color: #fff; outline: none; }
+        .search-box button { background-color: #dfb76c; border: none; color: #111; padding: 0 15px; font-weight: bold; cursor: pointer; }
+        .footer-bottom { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #222; color: #777; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Luxury Bags</div>
+        <a href="index.html">Home</a>
+        <a href="collection.html">Collection</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <h2 class="section-title">Our Exclusive Collection</h2>
+    <div class="container">
+        <div class="product-card">
+            <img src="https://unsplash.com" alt="Luxury Bag">
+            <h3>Classic Leather Handbag</h3>
+            <div class="price">$250</div>
+            <a href="#" class="btn">Order via WhatsApp</a>
+        </div>
+        <div class="product-card">
+            <img src="https://unsplash.com" alt="Luxury Bag">
+            <h3>Premium Shoulder Bag</h3>
+            <div class="price">$320</div>
+            <a href="#" class="btn">Order via WhatsApp</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Search Our Store</h3>
+                <div class="search-box">
+                    <input type="text" placeholder="Search bags...">
+                    <button>Go</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Luxury Bags Store. All Rights Reserved.</div>
+    </footer>
+</body>
+</html>
