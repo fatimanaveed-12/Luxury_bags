@@ -1,0 +1,5 @@
+.collection-frame img {
+    width: 100%;       /* Image ko frame ki poori width me fit karega */
+    height: 100%;      /* Image ko frame ki poori height me fit karega */
+    object-fit: cover; /* Image bina stretch ya kharab hue frame me crop hokar fit ho jayegi */
+}
