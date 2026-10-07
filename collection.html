@@ -6,81 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Collection - Luxury Bags</title>
     <style>
-       /* Product Grid Section */
-.product-grid, .collection-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    padding: 30px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: stretch;
+      /* Universal Card Grid Reset */
+div[class*="grid"], main, section {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 25px !important;
+    max-width: 1200px !important;
+    margin: 30px auto !important;
+    padding: 0 15px !important;
 }
 
-/* Individual Card Structure */
-.product-card, .card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    border: 1px solid #eaeaea;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
+/* Card Container Styling */
+div[class*="grid"] > div, 
+div[class*="card"], 
+.product-card, 
+.card {
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 
-.product-card:hover, .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+/* Fixed Height Image Display */
+div[class*="grid"] img, 
+div[class*="card"] img, 
+.product-card img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: contain !important; /* Image ka proportions kharab hone se bachayega */
+    background-color: #f9f9f9 !important;
+    border-radius: 8px !important;
+    margin-bottom: 12px !important;
+    display: block !important;
 }
 
-/* Fixed Image Container */
-.product-image-container, .card .img-box {
-    width: 100%;
-    height: 200px; /* Fixed uniform height */
-    overflow: hidden;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
-    margin-bottom: 12px;
+/* Typography & Price Styling */
+div[class*="grid"] h3, 
+div[class*="grid"] p, 
+div[class*="card"] h3, 
+div[class*="card"] p {
+    text-align: center !important;
+    margin: 4px 0 !important;
 }
 
-/* Perfect Fitting Image */
-.product-card img, .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Images cropping/stretching hone se bachayega */
-    display: block;
+/* WhatsApp Button Alignment */
+div[class*="grid"] a, 
+div[class*="card"] a, 
+.btn, 
+button {
+    display: inline-block !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+    margin-top: 10px !important;
+    text-align: center !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
 }
-
-/* Text & Title Alignment */
-.product-info, .card-content {
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: flex-end;
-}
-
-.product-title, .card h3 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #222;
-    margin: 8px 0 4px 0;
-}
-
-.product-price, .card .price {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #b8860b; /* Elegance Gold / Accent Color */
-    margin-top: 4px;
-} 
         /* Global Styles */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Georgia', serif; background-color: #faf9f6; color: #111; }
