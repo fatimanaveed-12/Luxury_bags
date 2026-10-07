@@ -6,6 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Collection - Luxury Bags</title>
     <style>
+       /* Product Grid Section */
+.product-grid, .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* Individual Card Structure */
+.product-card, .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eaeaea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.product-card:hover, .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Fixed Image Container */
+.product-image-container, .card .img-box {
+    width: 100%;
+    height: 200px; /* Fixed uniform height */
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin-bottom: 12px;
+}
+
+/* Perfect Fitting Image */
+.product-card img, .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Images cropping/stretching hone se bachayega */
+    display: block;
+}
+
+/* Text & Title Alignment */
+.product-info, .card-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.product-title, .card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #222;
+    margin: 8px 0 4px 0;
+}
+
+.product-price, .card .price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #b8860b; /* Elegance Gold / Accent Color */
+    margin-top: 4px;
+} 
         /* Global Styles */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Georgia', serif; background-color: #faf9f6; color: #111; }
