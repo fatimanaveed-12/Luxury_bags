@@ -351,49 +351,701 @@
             </div>
 
             <!-- Product 4 (bag4.jpg) -->
-                   <!-- Updated Absolute Full-Width Footer Section -->
-    <footer style="background: #111; color: #aaa; padding: 60px 8% 20px; font-size: 14px; border-top: 1px solid #222; display: block; clear: both; width: 100%; position: relative; float: left; left: 0; box-sizing: border-box;">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 40px; text-align: left; width: 100%;">
-            
-            <!-- Company Info & Search Bar Column -->
-            <div style="flex: 1; min-width: 250px;">
-                <h3 style="color: #fff; font-size: 18px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">VOGUE BAGS</h3>
-                <p style="font-size: 13px; line-height: 1.6; margin-bottom: 20px; color: #888;">Discover premium craftsmanship and timeless designs tailored for your everyday luxury lifestyle.</p>
-                
-                <!-- Search Bar Feature -->
-                <form action="#" method="GET" style="display: flex; max-width: 300px; border: 1px solid #333; background: #1a1a1a;">
-                    <input type="text" placeholder="Search products..." required style="width: 100%; padding: 10px 15px; background: transparent; border: none; color: #fff; font-size: 13px; outline: none;">
-                    <button type="submit" style="background: #b89474; color: #fff; border: none; padding: 0 15px; cursor: pointer; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Go</button>
-                </form>
-            </div>
+                  
+ <div class="product-info">
+                    <div class="product-category">Elite Collection</div>
+                    <div class="product-title">Classic Shoulder Bag</div>
+                    <div class="product-price">$299.00</div>
+                </div>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Bags Store</title>
+    <style>
+        /* Base Reset & Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-            <!-- Quick Links / Menu Column -->
-            <div style="flex: 1; min-width: 150px;">
-                <h4 style="color: #fff; font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;">Shop Menu</h4>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 12px;"><a href="#" style="color: #888; text-decoration: none;">New Arrivals</a></li>
-                    <li style="margin-bottom: 12px;"><a href="#" style="color: #888; text-decoration: none;">Best Sellers</a></li>
-                    <li style="margin-bottom: 12px;"><a href="#" style="color: #888; text-decoration: none;">Luxury Totes</a></li>
-                    <li style="margin-bottom: 12px;"><a href="#" style="color: #888; text-decoration: none;">Crossbody Bags</a></li>
-                </ul>
-            </div>
+        body {
+            background-color: #fcfbfa;
+            color: #222;
+            overflow-x: hidden;
+        }
 
-            <!-- Customer Service Column -->
-            <div style="flex: 1; min-width: 150px;">
-                <h4 style="color: #fff; font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;">Information</h4>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 12px;"><a href="#" style="color: #888; text-decoration: none;">Track Your Order</a></li>
-                    <li style="margin-bottom: 12px;"><a href="#" style="color: #888; text-decoration: none;">Shipping & Returns</a></li>
-                    <li style="margin-bottom: 12px;"><a href="#" style="color: #888; text-decoration: none;">Privacy Policy</a></li>
-                    <li style="margin-bottom: 12px;"><a href="#" style="color: #888; text-decoration: none;">Contact Support</a></li>
-                </ul>
+        /* Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #b89474;
+        }
+
+        /* Hero Banner Section */
+        .hero-banner {
+            position: relative;
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('bagbanner.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Elegant Moving Text */
+        .moving-text-container {
+            position: absolute;
+            top: 15%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 10px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .moving-text {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: floatText 20s linear infinite;
+        }
+
+        @keyframes floatText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Banner Content */
+        .hero-content h1 {
+            font-size: 55px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            color: #e0e0e0;
+        }
+
+        .btn-shop {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #ffffff;
+            color: #111;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-shop:hover {
+            background: #b89474;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 8%;
+            background: #fff;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            width: 100%;
+        }
+
+        .feature-box {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .feature-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .feature-box p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* Product Section */
+        .products-container {
+            padding: 80px 8%;
+            width: 100%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            color: #111;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+
+        .product-img-container {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 15px;
+            font-weight: 600;
+            color: #b89474;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header>
+        <div class="logo">VOGUE BAGS</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner with Moving Text -->
+    <section class="hero-banner">
+        <div class="moving-text-container">
+            <div class="moving-text">
+                ✦ EXCLUSIVE NEW COLLECTION ARRIVED ✦ FREE SHIPPING WORLDWIDE ✦ USE CODE: LUXE20 FOR 20% OFF ✦ HANDCRAFTED PREMIUM LEATHER ✦
             </div>
         </div>
-
-        <!-- University Project Credit Line -->
-        <div style="border-top: 1px solid #222; padding-top: 20px; text-align: center; font-size: 12px; color: #666; letter-spacing: 1px; width: 100%; clear: both;">
-            <p style="margin-bottom: 5px;">&copy; 2026 Vogue Bags Store. All Rights Reserved.</p>
-            <p style="font-style: italic; color: #b89474; font-weight: 500; text-transform: uppercase; margin-top: 8px;">University Project Developed by [Your Name / Roll No]</p>
+        <div class="hero-content">
+            <h1>Redefining Elegance</h1>
+            <p>Discover luxury bags crafted for your sophisticated lifestyle</p>
+            <a href="#shop" class="btn-shop">Explore Collection</a>
         </div>
-    </footer>
+    </section>
 
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="feature-box">
+            <h3>Premium Quality</h3>
+            <p>Crafted with the finest hand-picked materials and genuine leather.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Elegant Design</h3>
+            <p>Minimalist yet striking details that compliment every outfit.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Free Delivery</h3>
+            <p>Enjoy luxury right at your doorstep with safe and zero-cost shipping.</p>
+        </div>
+    </section>
+
+    <!-- Products Grid Section -->
+    <section class="products-container" id="shop">
+        <h2 class="section-title">Our Featured Collection</h2>
+        
+        <div class="product-grid">
+            <!-- Product 1 (bag.jpg) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="bag.jpg" alt="Premium Bag 1">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Classic Edition</div>
+                    <div class="product-title">Luxury Tote Bag</div>
+                    <div class="product-price">$249.00</div>
+                </div>
+            </div>
+
+            <!-- Product 2 (bag1.jpg) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="bag1.jpg" alt="Premium Bag 2">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Modern Series</div>
+                    <div class="product-title">Elegant Handbag</div>
+                    <div class="product-price">$189.00</div>
+                </div>
+            </div>
+
+            <!-- Product 3 (bag3.jpg) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="bag3.jpg" alt="Premium Bag 3">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Elite Collection</div>
+                    <div class="product-title">Classic Shoulder Bag</div>
+                    <div class="product-price">$299.00</div>
+                </div>
+            </div>
+
+            <!-- Product 4 (bag4.jpg) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="bag4.jpg" alt="Premium Bag 4">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Signature Style</div>
+                    <div class="product-title">Luxury Crossbody Bag</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Bags Store</title>
+    <style>
+        /* Base Reset & Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fcfbfa;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #b89474;
+        }
+
+        /* Hero Banner Section */
+        .hero-banner {
+            position: relative;
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('bagbanner.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Elegant Moving Text */
+        .moving-text-container {
+            position: absolute;
+            top: 15%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 10px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .moving-text {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: floatText 20s linear infinite;
+        }
+
+        @keyframes floatText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Banner Content */
+        .hero-content h1 {
+            font-size: 55px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            color: #e0e0e0;
+        }
+
+        .btn-shop {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #ffffff;
+            color: #111;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-shop:hover {
+            background: #b89474;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 8%;
+            background: #fff;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            width: 100%;
+        }
+
+        .feature-box {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .feature-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .feature-box p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* Product Section */
+        .products-container {
+            padding: 80px 8%;
+            width: 100%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            color: #111;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+
+        .product-img-container {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 15px;
+            font-weight: 600;
+            color: #b89474;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header>
+        <div class="logo">VOGUE BAGS</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner with Moving Text -->
+    <section class="hero-banner">
+        <div class="moving-text-container">
+            <div class="moving-text">
+                ✦ EXCLUSIVE NEW COLLECTION ARRIVED ✦ FREE SHIPPING WORLDWIDE ✦ USE CODE: LUXE20 FOR 20% OFF ✦ HANDCRAFTED PREMIUM LEATHER ✦
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Redefining Elegance</h1>
+            <p>Discover luxury bags crafted for your sophisticated lifestyle</p>
+            <a href="#shop" class="btn-shop">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="feature-box">
+            <h3>Premium Quality</h3>
+            <p>Crafted with the finest hand-picked materials and genuine leather.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Elegant Design</h3>
+            <p>Minimalist yet striking details that compliment every outfit.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Free Delivery</h3>
+            <p>Enjoy luxury right at your doorstep with safe and zero-cost shipping.</p>
+        </div>
+    </section>
+
+    <!-- Products Grid Section -->
+    <section class="products-container" id="shop">
+        <h2 class="section-title">Our Featured Collection</h2>
+        
+        <div class="product-grid">
+            <!-- Product 1 (bag.jpg) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="bag.jpg" alt="Premium Bag 1">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Classic Edition</div>
+                    <div class="product-title">Luxury Tote Bag</div>
+                    <div class="product-price">$249.00</div>
+                </div>
+            </div>
+
+            <!-- Product 2 (bag1.jpg) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="bag1.jpg" alt="Premium Bag 2">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Modern Series</div>
+                    <div class="product-title">Elegant Handbag</div>
+                    <div class="product-price">$189.00</div>
+                </div>
+            </div>
+
+            <!-- Product 3 (bag3.jpg) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="bag3.jpg" alt="Premium Bag 3">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Elite Collection</div>
+                    <div class="product-title">Classic Shoulder Bag</div>
+                    <div class="product-price">$299.00</div>
+                </div>
+            </div>
+
+            <!-- Product 4 (bag4.jpg) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="bag4.jpg" alt="Premium Bag 4">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Signature Style</div>
+                    <div class="product-title">Luxury Crossbody Bag</div>
+
+       
