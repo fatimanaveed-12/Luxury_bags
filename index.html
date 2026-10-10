@@ -434,6 +434,186 @@
     </style>
 
 
+       
+    /* --- Collection Section Styling --- */
+        .collection-section {
+            padding: 100px 20px;
+            background-color: #fcfcfc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .collection-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .collection-subtitle {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ff4757;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .collection-title {
+            font-size: 2.5rem;
+            color: #111111;
+            font-weight: 700;
+        }
+
+        .title-line {
+            width: 70px;
+            height: 3px;
+            background-color: #ff4757;
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Grid Layout */
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        /* Cards Design */
+        .collection-card {
+            display: block;
+            text-decoration: none;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .collection-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .collection-card:hover .collection-img {
+            transform: scale(1.08);
+        }
+
+        /* Hover Overlay */
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .collection-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .view-btn {
+            color: #ffffff;
+            background-color: rgba(255, 71, 87, 0.9);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Info below image */
+        .card-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-info h3 {
+            font-size: 18px;
+            color: #222222;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .card-info p {
+            font-size: 14px;
+            color: #777777;
+        }
+
+        /* Center Bottom Button */
+        .collection-footer-btn {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn-view-all {
+            display: inline-block;
+            padding: 15px 35px;
+            border: 2px solid #ff4757;
+            color: #ff4757;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-view-all:hover {
+            background-color: #ff4757;
+            color: #ffffff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .collection-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .collection-grid {
+                grid-template-columns: 1fr;
+            }
+            .collection-title {
+                font-size: 2rem;
+            }
+            .card-image-wrapper {
+                height: 280px;
+            }
+        }
+   
+
+
 
 
 </body>
