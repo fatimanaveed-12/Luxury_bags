@@ -1,3 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    <style>
+        /* --- General Reset & Fonts --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* --- Header / Navigation --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #ff4757;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 550px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bagbanner.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        /* --- NEW: Continuous Moving Tagline Bar --- */
+        .moving-tagline-container {
+            position: absolute;
+            top: 100px; /* Header ke bilkul neeche */
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 71, 87, 0.9); /* Premium Red Translucent Background */
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .moving-tagline {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            animation: scrollTagline 20s linear infinite;
+            padding-left: 100%;
+        }
+
+        /* --- Main Hero Content (Fade Up Animation) --- */
+        .hero-content {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: moveUpFade 1.2s ease-out forwards;
+            margin-top: 60px; /* Tagline bar ke liye space */
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+
+        /* Shop All Button */
+        .btn-shop {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #ff4757;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+        }
+
+        .btn-shop:hover {
+            background-color: #e84118;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(232, 65, 24, 0.6);
+        }
+
+        /* Sale Badge (Side Tag) */
+        .sale-badge {
+            position: absolute;
+            right: 40px;
+            top: 55%;
+            transform: translateY(-50%);
+            background-color: #ffeb3b;
+            color: #000;
+            padding: 20px;
+            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+            z-index: 10;
+        }
+
+        .sale-badge .big-text {
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .sale-badge .small-text {
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        /* --- Keyframe Animations --- */
+        @keyframes scrollTagline {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        @keyframes moveUpFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.05); }
+            100% { transform: translateY(-50%) scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu { gap: 15px; }
+            .hero-content h1 { font-size: 2.3rem; }
+            .moving-tagline-container { top: 80px; }
+            .sale-badge {
+                top: auto;
+                bottom: 30px;
+                right: 20px;
+                transform: none;
+                width: 90px;
+                height: 90px;
+                padding: 10px;
+            }
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header Section -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">MyStore</div>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 2. Hero Banner Section -->
+    <section class="hero-section">
+        
+        <!-- Continuous Moving Tagline -->
+        <div class="moving-tagline-container">
+            <div class="moving-tagline">
+                🔥 Special Edition Bags Are Now Live! • Free Shipping Worldwide On Orders Over $50 • Don't Miss Out! 🔥
+            </div>
+        </div>
+
+        <!-- Main Banner Content -->
+        <div class="hero-content">
+            <h1>New Bags Collection</h1>
+            <p>Upgrade your style with our premium quality handcrafted bags.</p>
+            <a href="#" class="btn-shop">Shop All</a>
+        </div>
+
+        <!-- 50% Off Side Sale Badge -->
+        <div class="sale-badge">
+            <span class="big-text">50%</span>
+            <span class="small-text">OFF</span>
+        </div>
+    </section>
+
+    <!-- FUTURE SECTIONS START HERE -->
+    <!-- Agla koi bhi section (jaise grid or product rows) aap yahan se paste krna shuru kr skte hain -->
+
+</body>
+</html>
 
            
           
