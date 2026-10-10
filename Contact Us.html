@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Bottom Project Tagline Animation */
+        @keyframes scrollProjectText {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+        .scrolling-text {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff4757;
+            animation: scrollProjectText 25s linear infinite;
+            padding-left: 100%;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #121212; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+    <!-- 1. HEADER / NAVIGATION MENU -->
+    <header style="position: fixed; top: 0; left: 0; width: 100%; background-color: #1a1a1a; box-shadow: 0 2px 10px rgba(0,0,0,0.5); z-index: 1000;">
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 20px;">
+            <div style="font-size: 24px; font-weight: bold; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;">MyStore</div>
+            <ul style="display: flex; list-style: none; gap: 30px; margin: 0; padding: 0;">
+                <li><a href="index.html" style="text-decoration: none; color: #bbbbbb; font-weight: 500; font-size: 16px; transition: color 0.3s;">Home</a></li>
+                <li><a href="About.html" style="text-decoration: none; color: #bbbbbb; font-weight: 500; font-size: 16px; transition: color 0.3s;">About</a></li>
+                <li><a href="Collection.html" style="text-decoration: none; color: #bbbbbb; font-weight: 500; font-size: 16px; transition: color 0.3s;">Collection</a></li>
+                <li><a href="Contact%20Us.html" style="text-decoration: none; color: #ff4757; font-weight: 500; font-size: 16px; transition: color 0.3s;">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main style="padding-top: 140px; padding-bottom: 120px;">
+        
+        <!-- 2. WIDE INTRODUCTION PARAGRAPH SECTION -->
+        <section style="max-width: 1100px; margin: 0 auto 50px auto; padding: 0 20px; text-align: center;">
+            <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 4px; color: #ff4757; font-weight: 700; display: block; margin-bottom: 15px;">Get In Touch</span>
+            <h1 style="font-size: 2.8rem; font-weight: 800; margin: 0 0 20px 0; color: #ffffff;">We Would Love To Hear From You</h1>
+            <p style="font-size: 16px; line-height: 1.8; color: #aaaaaa; max-width: 900px; margin: 0 auto; text-align: center;">
+                At MyStore Bag Boutique, we are fully committed to providing an unparalleled luxury experience from the moment you browse our premium collections to the day your statement piece arrives at your doorstep. Whether you have questions regarding our handcrafted materials, custom bulk orders, shipment tracking, or simply want to share your fashion journey feedback, our specialized customer support team is always standing by to assist you with elite care.
+            </p>
+            <div style="width: 70px; height: 3px; background-color: #ff4757; margin: 25px auto 0 auto; border-radius: 2px;"></div>
+        </section>
+
+        <!-- 3. DARK FORM SECTION -->
+        <section style="max-width: 650px; margin: 0 auto; padding: 0 20px;">
+            <div style="background-color: #1a1a1a; padding: 40px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); border: 1px solid #2b2b2b;">
+                <h2 style="font-size: 1.8rem; color: #ffffff; font-weight: 700; margin-top: 0; margin-bottom: 25px; text-align: center;">Send Us A Message</h2>
+                
+                <form action="#" method="POST" onsubmit="alert('Message Sent Successfully!'); return false;">
+                    <div style="margin-bottom: 20px;">
+                        <label for="name" style="display: block; font-size: 14px; font-weight: 600; color: #dddddd; margin-bottom: 8px;">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name" style="width: 100%; box-sizing: border-box; background-color: #262626; border: 1px solid #3a3a3a; padding: 12px 15px; border-radius: 6px; color: #ffffff; font-size: 15px; outline: none;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="email" style="display: block; font-size: 14px; font-weight: 600; color: #dddddd; margin-bottom: 8px;">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com" style="width: 100%; box-sizing: border-box; background-color: #262626; border: 1px solid #3a3a3a; padding: 12px 15px; border-radius: 6px; color: #ffffff; font-size: 15px; outline: none;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="subject" style="display: block; font-size: 14px; font-weight: 600; color: #dddddd; margin-bottom: 8px;">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="How can we help you?" style="width: 100%; box-sizing: border-box; background-color: #262626; border: 1px solid #3a3a3a; padding: 12px 15px; border-radius: 6px; color: #ffffff; font-size: 15px; outline: none;">
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <label for="message" style="display: block; font-size: 14px; font-weight: 600; color: #dddddd; margin-bottom: 8px;">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Type your message details here..." style="width: 100%; box-sizing: border-box; background-color: #262626; border: 1px solid #3a3a3a; padding: 15px; border-radius: 6px; color: #ffffff; font-size: 15px; outline: none; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" style="width: 100%; background-color: #ff4757; color: #ffffff; border: none; padding: 14px; border-radius: 6px; font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">Submit Inquiry</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. FINAL MARQUEE FOOTER -->
+    <footer style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #1a1a1a; padding: 12px 0; border-top: 1px solid #2b2b2b; overflow: hidden; white-space: nowrap; z-index: 1000;">
+        <div class="scrolling-text">
+            🎓 University Project Submitted By: Drama Queen Group • Members: Creative Minds Frameworks Setup • Special Thanks To Our Instructor • Project Final Submission Completed Successfully! 🎓
+        </div>
+    </footer>
+
+</body>
+</html>
 
