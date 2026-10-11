@@ -583,7 +583,21 @@
     </div>
 </footer>
 
-    
+
+
+    <script>
+// LocalStorage se saved cart load karke number dikhane ke liye
+function updateIndexCartCount() {
+    let bagCart = JSON.parse(localStorage.getItem('userBagCart')) || [];
+    const counter = document.getElementById('cart-count');
+    if(counter) {
+        counter.innerText = bagCart.length;
+    }
+}
+// Page open hote hi count update ho jaye
+window.onload = updateIndexCartCount;
+</script>
+
        
    
 
