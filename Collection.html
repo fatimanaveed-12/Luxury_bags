@@ -220,31 +220,43 @@
 
 
 
+<!-- ========================================== -->
+<!-- CART POP-UP AUR JAVASCRIPT CODE (FINAL) -->
+<!-- ========================================== -->
 
 <div id="cart-notification" style="display: none; position: fixed; bottom: 25px; right: 25px; background: #2ecc71; color: white; padding: 15px 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); font-family: Arial, sans-serif; font-weight: bold; z-index: 9999;"></div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+    // 1. Memory se purana cart data check karna
     let bagCart = JSON.parse(localStorage.getItem('userBagCart')) || [];
+    
+    // Page load hote hi counter chalane ke liye function ko call karein
     updateCartCount();
 
+    // 2. Saare buttons ko select karna
     const addButtons = document.querySelectorAll('.add-to-bag-btn');
 
+    // 3. Button click event loop
     addButtons.forEach(button => {
         button.addEventListener('click', function() {
+            // Button ke andar se attributes read karna
             const name = this.getAttribute('data-name');
             const price = this.getAttribute('data-price');
             
             if (name && price) {
+                // Cart mein add karna
                 bagCart.push({ name: name, price: price });
                 localStorage.setItem('userBagCart', JSON.stringify(bagCart));
                 
+                // Screen update karna
                 updateCartCount();
                 showNotification(name, price);
             }
         });
     });
 
+    // Counter update karne ka function
     function updateCartCount() {
         const counter = document.getElementById('cart-count');
         if(counter) {
@@ -252,25 +264,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Success notification popup dikhane ka function
     function showNotification(bagName, bagPrice) {
         const popup = document.getElementById('cart-notification');
         if(popup) {
             popup.innerText = `👜 ${bagName} (${bagPrice}) cart mein add ho gaya!`;
             popup.style.display = 'block';
             
+            // 3 second baad notification gayab ho jaye
             setTimeout(() => {
                 popup.style.display = 'none';
             }, 3000);
         }
     }
 });
-
-
-<!-- Pop-up Notification Box (Ise script tag se bilkul upar lagayein) -->
-<div id="cart-notification" style="display: none; position: fixed; bottom: 25px; right: 25px; background: #2ecc71; color: white; padding: 15px 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); font-family: Arial, sans-serif; font-weight: bold; z-index: 9999;"></div>
-
-
 </script>
+<!-- ========================================== -->
+
 
 
         
