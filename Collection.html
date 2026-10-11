@@ -220,6 +220,64 @@
 
 
 
+        
+        
+        
+        <!-- Pop-up Notification Box (Ise script se ek line upar paste karein) -->
+<div id="cart-notification" style="display: none; position: fixed; bottom: 25px; right: 25px; background: #2ecc71; color: white; padding: 15px 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); font-family: Arial, sans-serif; font-weight: bold; z-index: 9999;"></div>
+
+<!-- Main JavaScript Logic -->
+<script>
+// 1. Memory se purana cart check karna
+let bagCart = JSON.parse(localStorage.getItem('userBagCart')) || [];
+updateCartCount();
+
+// 2. Saare buttons ko select karna
+const addButtons = document.querySelectorAll('.add-to-bag-btn');
+
+// 3. Button click event loop
+addButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Yeh line button ke card ke andar se h3 (naam) aur p (price) khud dhoond legi
+        const productCard = this.parentElement;
+        const name = productCard.querySelector('h3').innerText;
+        const price = productCard.querySelector('p').innerText;
+        
+        // Cart array mein product details push karna
+        bagCart.push({ name: name, price: price });
+        
+        // Browser memory save karna
+        localStorage.setItem('userBagCart', JSON.stringify(bagCart));
+        
+        // Screen par counter aur notification update karna
+        updateCartCount();
+        showNotification(name, price);
+    });
+});
+
+// Counter text update function
+function updateCartCount() {
+    const counter = document.getElementById('cart-count');
+    if(counter) {
+        counter.innerText = bagCart.length;
+    }
+}
+
+// Success pop-up notification function
+function showNotification(bagName, bagPrice) {
+    const popup = document.getElementById('cart-notification');
+    if(popup) {
+        popup.innerText = `👜 ${bagName} (${bagPrice}) cart mein add ho gaya!`;
+        popup.style.display = 'block';
+        
+        // 3 second ke baad notification chupa dena
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 3000);
+    }
+}
+</script>
+
 
 
 
