@@ -524,6 +524,159 @@
 </section>
 
 
+
+
+
+<!-- Customer Reviews Scrolling Section Start -->
+<style>
+    /* Reviews Section Outer Container */
+    .reviews-section {
+        padding: 50px 0;
+        background-color: #fcf8f5; /* Light elegant background suitable for bags shop */
+        overflow: hidden;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .reviews-section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        color: #222;
+        font-weight: 600;
+    }
+
+    .reviews-wrapper {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Infinite Scrolling Track */
+    .reviews-track {
+        display: flex;
+        /* Width calculated for 8 cards (4 original + 4 duplicates) */
+        width: calc((300px + 30px) * 8); 
+        animation: scrollReviews 25s linear infinite;
+    }
+
+    /* Hover krny pr scroll ruk jayega taky customer parh saky */
+    .reviews-track:hover {
+        animation-play-state: paused;
+    }
+
+    /* Individual Review Card */
+    .review-card {
+        background: #ffffff;
+        width: 300px;
+        margin: 0 15px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        flex-shrink: 0;
+        text-align: left;
+        border: 1px solid #eee;
+        box-sizing: border-box;
+    }
+
+    .review-card .stars {
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+
+    .review-card p {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .review-card h4 {
+        font-size: 14px;
+        color: #111;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    /* Animation logic for infinite loop */
+    @keyframes scrollReviews {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            /* Smooth transition to the exact point where duplicates start (4 cards width + margins) */
+            transform: translateX(calc((-300px - 30px) * 4)); 
+        }
+    }
+</style>
+
+<section class="reviews-section">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews-wrapper">
+        <div class="reviews-track">
+            
+            <!-- 1. Original Review Card -->
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The premium stitching and material quality of the bags are amazing. Highly recommended!"</p>
+                <h4>- Ayesha Khan</h4>
+            </div>
+            
+            <!-- 2. Original Review Card -->
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Super fast delivery in Lahore, and the shoulder bag looks exactly like the pictures!"</p>
+                <h4>- Sana Ahmed</h4>
+            </div>
+            
+            <!-- 3. Original Review Card -->
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐</div>
+                <p>"Very spacious bridal bags. Premium look and feel. Will definitely buy again."</p>
+                <h4>- Zainab Bibi</h4>
+            </div>
+            
+            <!-- 4. Original Review Card -->
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Loved the aesthetic packaging and the leather is top-notch. Worth every rupee!"</p>
+                <h4>- Maria Ali</h4>
+            </div>
+            
+            <!-- == DUPLICATE CARDS (Required for smooth seamless scrolling loop) == -->
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The premium stitching and material quality of the bags are amazing. Highly recommended!"</p>
+                <h4>- Ayesha Khan</h4>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Super fast delivery in Lahore, and the shoulder bag looks exactly like the pictures!"</p>
+                <h4>- Sana Ahmed</h4>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐</div>
+                <p>"Very spacious bridal bags. Premium look and feel. Will definitely buy again."</p>
+                <h4>- Zainab Bibi</h4>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Loved the aesthetic packaging and the leather is top-notch. Worth every rupee!"</p>
+                <h4>- Maria Ali</h4>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Customer Reviews Scrolling Section End -->
+
+
+
+
+
+
+
+
+    
 <!-- ========================================== -->
 <!-- 5. ATTRACTIVE CHARCOAL BLACK FOOTER        -->
 <!-- ========================================== -->
